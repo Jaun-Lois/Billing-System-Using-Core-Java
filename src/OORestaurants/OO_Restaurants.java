@@ -6,13 +6,11 @@
 package OORestaurants;
 
 import java.awt.Component;
-import javax.swing.JTextField;
+import javax.swing.*;
 import java.awt.TextField;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.UnsupportedLookAndFeelException;
 import java.util.GregorianCalendar;
 import java.awt.Color;
 import java.awt.print.PrinterException;
@@ -29,7 +27,9 @@ public class OO_Restaurants extends javax.swing.JFrame {
     double secondnum;
     double result;
     String operations;
-    
+    private JButton button1;
+    private JComboBox comboBox1;
+
 
     /**
      * Creates new form OO_Restaurants
@@ -140,6 +140,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        JButton jButtonPrintToConsol = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -148,7 +149,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 8));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jLabel1.setText("WALMART");
+        jLabel1.setText("IT SOLUTIONS SENEKAL");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -243,6 +244,15 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jBtnClear.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jBtnClear.setText("C");
         jBtnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnClearActionPerformed(evt);
+            }
+        });
+
+        //////////////////JAUN-LOIS
+        jButtonPrintToConsol.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jButtonPrintToConsol.setText("Console");
+        jButtonPrintToConsol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnClearActionPerformed(evt);
             }
@@ -1360,7 +1370,6 @@ public class OO_Restaurants extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(OO_Restaurants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
